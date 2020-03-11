@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Filters in Script</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="CamperSalesController">
+        <p>Product: {{ product }}</p>
+        <p>Product in lowercase: {{ getProductAsLowercase() }}</p>
+        <p>Product in uppercase: {{ getProductAsUppercase() }}</p>
+        <hr />
+        <p>Price: {{ price }}</p>
+        <p>Price using currency: {{ getPriceAsCurrency() }}</p>
+        <p>Price using number: {{ getPriceAsNumber() }}</p>
+        <hr />
+        <p>On sale until (month day, year): {{ getEndSaleAsLongDate() }}</p>
+        <p>On sale until (monthNum-day-year): {{ getEndSaleAsAmericanDate() }}</p>
+        <p>On sale until (day-monthNum-year): {{ getEndSaleAsUKDate() }}</p>
+        <hr />
+        <p>Comments:</p>
+        <ul>
+            <li ng-repeat="comment in bestCommentsByName">
+                {{ comment }}
+            </li>
+        </ul>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/CamperSalesController.js"></script>
+</body>
+</html>

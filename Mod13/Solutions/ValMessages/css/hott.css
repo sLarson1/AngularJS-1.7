@@ -1,0 +1,55 @@
+body {background-color:#87AACF}
+
+h1 {font-family:Tahoma,Verdana,Helvetica sans-serif;}
+
+.HOTT {
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 25px;
+    width: 80%;
+    background: #bcdcff;
+    padding: 20px 20px 20px 20px;
+    font: 1em Tahoma,Verdana,Helvetica sans-serif;
+    color: #000;
+    float: left;
+}
+
+.HOTT label {
+    display: block;
+    margin: 0px 0px 5px;
+    font-weight: bold;
+}
+
+.HOTT input[type="text"], .HOTT input[type="email"], .HOTT textarea {
+    color: #888;
+    width: 60%;
+    padding: 0px 0px 0px 5px;
+    border: 1px solid #C5E2FF;
+    background: #FBFBFB;
+    outline: 0;
+    -webkit-box-shadow:inset 0px 1px 6px #ECF3F5;
+    box-shadow: inset 0px 1px 6px #ECF3F5;
+    font: 200 12px/25px Arial, Helvetica, sans-serif;
+    height: 30px;
+    line-height:15px;
+    margin: 2px 6px 16px 0px;
+}
+
+.HOTT textarea{
+    height:100px;
+    padding: 5px 0px 0px 5px;
+    width: 60%;
+}
+
+input[type='submit'] {
+    border: solid 1px black;
+    background-color: white;
+    font-weight: bold;
+}
+span{
+    display:inline-block;
+    vertical-align:top;
+    color: red;
+    margin-top: 5px;
+    font-weight: bold
+}

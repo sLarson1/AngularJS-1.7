@@ -1,0 +1,9 @@
+{
+            title: 'Open House',
+            start: '2017-11-07',
+			desc: 'Open house at 1 Woodridge Ave. Brick 2 story with garage.'
+        }, {
+            title: 'Birthday Party',
+            start: '2018-01-11',
+			desc: 'Birthday party for John. Bring potato salad.'
+        }

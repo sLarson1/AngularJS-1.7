@@ -1,0 +1,24 @@
+﻿<!doctype html>
+<html ng-app="ifApp">
+  <head>
+    <meta charset="utf-8" />
+    <title>Using ngIf</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body ng-controller="MainController">
+    <div class="container">
+      <button type="button" class="btn btn-default btn-lg" ng-if="!mute"  ng-click="muteToggle()" >
+        <span class="glyphicon glyphicon-volume-off"></span> Muted
+      </button>
+      <button type="button" class="btn btn-default btn-lg" ng-if="mute"  ng-click="muteToggle()">
+        <span class="glyphicon glyphicon-volume-up"></span> Full Volume!
+      </button>
+      <p>$scope.mute = {{mute}}</p>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/ngIf.js"></script>
+  </body>
+</html>
+
+
+                

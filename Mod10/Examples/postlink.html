@@ -1,0 +1,27 @@
+﻿<!doctype html>
+<html ng-app="searchApp">
+<head>
+    <meta charset="utf-8">
+
+    <title>Using a Custom Directive</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container">
+        <div ng-controller="CustomerController">
+            <h1>Search Results</h1>
+            <search-result customer-object="customer"
+                           format-address-function="formatAddress(myCompany)"
+                           ng-repeat="customer in customers">
+            </search-result>
+        </div>
+
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/SearchApp.js"></script>
+    <script src="scripts/controllers/CustomerController3.js"></script>
+    <script src="scripts/directives/postlink.js"></script>
+</body>
+</html>

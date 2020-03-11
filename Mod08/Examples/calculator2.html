@@ -1,0 +1,84 @@
+﻿<!doctype html>
+<html ng-app="mathApp">
+<head>
+    <meta charset="utf-8">
+
+    <title>Calculator Service</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        form {
+            border: 1px solid #CCC;
+            padding: 10px;
+        }
+
+        .btnwidth {
+            width: 50px !important;
+        }
+
+        .margin {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body ng-controller="CalculatorController">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="page-header">
+                    <h1>Calculator</h1>
+                </div>
+                <form>
+                    <div class="form-group">
+                        <label for="txtNumber1">Number 1:</label>
+                        <input type="number" class="form-control" id="txtNumber1" ng-model="num1">
+                    </div>
+                    <div class="form-group">
+                        <label for="txtNumber2">Number 2:</label>
+                        <input type="number" class="form-control" id="txtNumber2" ng-model="num2">
+                    </div>
+                    <div class="row margin center-block">
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="add()" class="btn btn-info btnwidth" id="plus">+</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="multiply()" class="btn btn-info btnwidth" id="times">*</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="square()" class="btn btn-info btnwidth" id="x2">x<sup>2</sup></button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="cube()" class="btn btn-info btnwidth" id="x3">x<sup>3</sup></button>
+                        </div>
+                    </div>
+                    <div class="row margin center-block">
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="subtract()" class="btn btn-info btnwidth" id="minux">-</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="divide()" class="btn btn-info btnwidth" id="divided">/</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="mod()" class="btn btn-info btnwidth" id="percent">%</button>
+                        </div>
+                        <div class="col-xs-3">
+                            <button type="button" ng-click="sqrt()" class="btn btn-info btnwidth" id="squareroot">&radic;<span style="text-decoration: overline">2</span></button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <span>Result: {{result}}</span>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/mathApp.js"></script>
+    <script src="scripts/controllers/CalculatorController.js"></script>
+    <script src="scripts/services/MathService.js"></script>
+    <script src="scripts/services/CalculatorService.js"></script>
+</body>
+</html>

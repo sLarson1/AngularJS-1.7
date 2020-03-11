@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html ng-app="MyApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Using $filterProvider</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Using $filterProvider</h1>
+                </div>
+                <div ng-controller="GreetController">
+                    <p>
+                        <input type="text" ng-model="who" placeholder="Type a name here">
+                    </p>
+                    <div> Unfiltered: {{ who }} </div>
+                    <hr>
+                    <div> Filtered: {{ who | greet }} </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/GreetController.js"></script>
+    <script src="scripts/filters/GreetingFilter.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Data Binding</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app>
+
+    <div ng-init="employees = [
+                 {name:'Devan Marie', title:'Transportation Coordinator', pay:42000},
+                 {name:'Zephaniah Hugh', title:'Demolition Expert', pay:39000},
+                 {name:'Pursalane Faye', title:'Marketing Specialist', pay:42000}
+            ]">
+        <h2>There are {{employees.length}} employees:</h2>
+        <ul>
+            <li ng-repeat="emp in employees">
+                Employee #{{$index + 1}} - {{emp.name}}  ({{emp.title}} - Salary: {{emp.pay}})
+            </li>
+        </ul>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+</body>
+</html>

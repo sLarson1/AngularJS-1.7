@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="filtersApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div ng-controller="FilterController">
+
+            <input ng-model="msg" type="text" />
+            <p>First word only: </p>
+            <p>All words: </p>
+            <p>Replace: </p>
+            <p>Word count: </p>
+
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/filtersApp.js"></script>
+    <script src="scripts/controllers/FilterController.js"></script>
+    
+</body>
+</html>

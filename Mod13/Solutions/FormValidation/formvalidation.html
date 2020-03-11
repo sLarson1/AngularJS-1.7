@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portal Login</title>
+<link href="css/bootstrap.min.css" rel="stylesheet" >
+<link href="css/cloak.css" rel="stylesheet">
+<link href="css/val.css" rel="stylesheet">
+</head>
+
+<body ng-app="myApp" ng-cloak>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1> Portal Login </h1>
+            <form name="portal" ng-controller="myController" ng-submit="formValid(portal.$valid)" novalidate>
+              <label for="empID"> Employee ID:</label>
+              <input type="text" name="empID" id="empID"
+                           ng-model="user.ID"
+                           ng-required = "true"
+                           ng-pattern="/^ID-[357][146][28]$/"
+                           class="form-control">
+              <div class="error"> <span ng-show="portal.empID.$error.required && portal.empID.$touched"> Your Employee ID Is Required </span> <span ng-show="portal.empID.$error.pattern"> Your Employee ID Is Not Valid </span> </div>
+              <label for="userName"> User Name:</label>
+              <input type="text" name="userName" id="userName"
+                           ng-model="user.userName"
+                           ng-required="true"
+                           class="form-control">
+              <div class="error"> <span ng-show="portal.userName.$error.required  && portal.userName.$touched"> Your User Name Is Required </span> </div>
+              <label for="password"> Password:</label>
+              <input type="password" name="password" id="password"
+                           ng-model="user.password"
+                           ng-required = "true"
+                           ng-minlength="8"
+                           ng-maxlength="15"
+                           class="form-control">
+              <div class="error"> <span ng-show="portal.password.$error.required  && portal.password.$touched"> Your Password Is Required </span> <span ng-show="portal.password.$error.minlength"> Your Password Is Too Short </span> <span ng-show="portal.password.$error.maxlength"> Your Password is Too Long</span> </div>
+              <div>
+                <input type="submit"
+                           value="Submit">
+              </div>
+            </form>
+      </div>
+  </div>
+</div>
+<script src="scripts/angular.min.js"></script> 
+<script src="scripts/validationApp.js"></script>
+</body>
+</html>

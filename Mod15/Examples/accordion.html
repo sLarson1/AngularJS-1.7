@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html ng-app="accordionDemo">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using the UI Bootstrap - Accordion</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Using the UI Bootstrap - Accordion</h1>
+      </div>
+      <uib-accordion>
+        <uib-accordion-group heading="Tents" is-open="true" panel-class="panel-success"> <img src="images/tent.png" width="200" height="100" alt="Tents" class="thumbnail pull-right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus ornare arcu, eu blandit tortor porttitor mollis. Donec ipsum lectus, lobortis id sapien et, interdum volutpat dui. Nunc tristique lorem a elit vestibulum, faucibus venenatis nisl ultricies.</uib-accordion-group>
+        <uib-accordion-group heading="Backpacks" panel-class="panel-success"><img src="images/backpack.png" alt="Backpacks" width="125" height="150" class="thumbnail pull-right" />Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus ornare arcu, eu blandit tortor porttitor mollis. Donec ipsum lectus, lobortis id sapien et, interdum volutpat dui. Nunc tristique lorem a elit vestibulum, faucibus venenatis nisl ultricies.</uib-accordion-group>
+        <uib-accordion-group heading="Tools" panel-class="panel-success"><img src="images/tools.png" alt="Tools" width="139" height="150" class="thumbnail pull-right" /> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam finibus ornare arcu, eu blandit tortor porttitor mollis. Donec ipsum lectus, lobortis id sapien et, interdum volutpat dui. Nunc tristique lorem a elit vestibulum, faucibus venenatis nisl ultricies.</uib-accordion-group>
+      </uib-accordion>
+    </div>
+  </div>
+</div>
+<!-- AngularJS -->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<!-- UI Bootstrap -->
+<script src="scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<!-- Accordion -->
+<script src="scripts/accordionApp.js"></script>
+</body>
+</html>

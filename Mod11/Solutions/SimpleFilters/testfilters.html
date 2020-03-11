@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html ng-app="filtersApp">
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div ng-controller="FilterController">
+
+            <input ng-model="msg" type="text" />
+            <p>First word only: {{msg | capitalize}}</p>
+            <p>All words: {{msg | capitalize:true}}</p>
+            <p>Replace: {{msg | replace}}</p>
+            <p>Word count: {{msg | wordCount}}</p>
+
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/filtersApp.js"></script>
+    <script src="scripts/controllers/FilterController.js"></script>
+    <script src="scripts/filters/CustomFilters.js"></script>
+</body>
+</html>

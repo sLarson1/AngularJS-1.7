@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Forms</title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app>
+    <form name="studentForm"
+          ng-init="firstName = '';
+                 lastName = '';
+                 email = 'n/a'">
+        <p>
+            <label>First name:</label>
+            <input type="text" ng-model="student.firstName">
+            {{student.firstName}}
+        </p>
+
+        <p>
+            <label>Last name:</label>
+            <input type="text" ng-model="student.lastName">
+            {{student.lastName}}
+        </p>
+
+        <p>
+            <label>Email:</label>
+            <input type="text" ng-model="student.email">
+            {{student.email}}
+        </p>
+
+        <hr>
+        {{studentForm | json}}
+    </form>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/StudentController.js"></script>
+</body>
+
+
+</html>

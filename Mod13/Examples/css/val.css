@@ -1,0 +1,12 @@
+input:focus {
+	background: #ffff99;
+}
+input.ng-invalid.ng-touched {
+	border: 1px solid #ff0000;
+}
+input.ng-valid.ng-touched {
+	border: 1px solid #339900;
+}
+.error {
+	color: #ff0000;
+}

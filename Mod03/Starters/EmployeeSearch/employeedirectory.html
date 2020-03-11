@@ -1,0 +1,41 @@
+﻿<!doctype html>
+<html ng-app="FilterApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Filtering</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Employee Search</h1>
+      </div>
+      <div ng-controller="EmployeeController" >
+        <p>
+          <label for="txtSearch">Search:</label>
+          <input placeholder="Search for..." name="txtSearch">
+        </p>
+        <div id="employees">
+          <div ng-repeat="emp in employees">
+            <div class="resultwrapper">
+              <h3> {{emp.name}}</h3>
+              <strong>Title:</strong> {{emp.title}}<br>
+              <strong>Start Date:</strong> {{emp.startDate}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/filterApp.js"></script>
+<script src="scripts/controllers/EmployeeController.js"></script>
+   
+</body>
+</html>

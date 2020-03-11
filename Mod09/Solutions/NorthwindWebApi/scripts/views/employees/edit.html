@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="employeeForm" role="form" class="form-horizontal"  ng-submit="submit()">
+            <fieldset>
+                <legend>{{formTitle}}</legend>
+                <div class="form-group" ng-show="!isNew">
+                    <label  class="col-md-2 control-label">Id</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" name="inputId" value="{{employee.EmployeeId}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">First name</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputFirstName" placeholder="Enter first name here ..."  ng-model="employee.FirstName"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Last name</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputLastName" placeholder="Enter last name here ..."  ng-model="employee.LastName" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Title</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputTitle" placeholder="Enter title here ..." ng-model="employee.Title" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Phone</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputPhone" placeholder="Enter phone here ..." ng-model="employee.Phone" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-primary">{{formTitle}}</button>
+                        <button type="button" class="btn" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

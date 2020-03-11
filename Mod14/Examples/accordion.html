@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Accordion</title>
+<!-- Downloaded Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/accordion.css">
+</head>
+<body ng-app="accordionApp">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Accordion</h1>
+      </div>
+      <div ng-controller="MainController">
+        <div class="accordion-item">
+          <div ng-click="active = !active" ng-class="{'accordion-heading-collapsed': active, 'accordion-heading-expanded': !active}">
+            <p>Item 1</p>
+          </div>
+          <div class="slideDown" ng-hide="active">
+            <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at porttitor ipsum. Etiam interdum facilisis mi, sed elementum quam pulvinar at. Nulla luctus quam a arcu aliquet, vitae tincidunt justo mollis. Pellentesque sodales ornare euismod. Curabitur id cursus justo. Nullam purus odio, imperdiet ac risus ac, cursus tempor leo. Donec nulla augue, tempus a augue eget, mollis hendrerit massa. </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <div ng-click="active1 = !active1" ng-class="{'accordion-heading-collapsed': active1, 'accordion-heading-expanded': !active1}">
+            <p>Item 2</p>
+          </div>
+          <div class="slideDown" ng-hide="active1">
+            <div class="accordion-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque at porttitor ipsum. Etiam interdum facilisis mi, sed elementum quam pulvinar at. Nulla luctus quam a arcu aliquet, vitae tincidunt justo mollis. Pellentesque sodales ornare euismod. Curabitur id cursus justo. Nullam purus odio, imperdiet ac risus ac, cursus tempor leo. Donec nulla augue, tempus a augue eget, mollis hendrerit massa. </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- AngularJS -->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<script src="scripts/accordion.js"></script>
+</body>
+</html>

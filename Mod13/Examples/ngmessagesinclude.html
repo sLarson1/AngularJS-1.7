@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Using ngMessagesInclude</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/val.css" rel="stylesheet">
+    <script type="text/ng-template" id="msgTemplate">
+        <div ng-message="required">This field is required</div>
+        <div ng-message="minlength">This field doesn't have enough characters</div>
+        <div ng-message="maxlength">This field has too many characters</div>
+    </script>    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Using ngMessagesInclude</h1>
+                </div>
+                <form name="clientForm" class="HOTT">
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" ng-model="firstName" required ng-minlength="3" ng-maxlength="30" class="form-control" />
+                        <div ng-messages="clientForm.firstName.$error">
+                            <div ng-messages-include="msgTemplate"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" ng-model="lastName" required ng-minlength="3" ng-maxlength="15" class="form-control">
+                        <div ng-messages="clientForm.lastName.$error">
+                            <div ng-message="required">Last name is required</div>
+                            <div ng-messages-include="msgTemplate"></div>                            
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/angular.min.js"></script>
+    <script src="Scripts/angular-messages.min.js"></script>
+    <script src="Scripts/ngmessages.js"></script>
+</body>
+</html>

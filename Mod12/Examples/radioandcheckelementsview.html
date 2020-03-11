@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Forms</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+    <form name="client" ng-controller="LanguageController">
+
+        <p> What is your favorite Programming Language ?</p>
+        <label>
+            <input type="radio" ng-model="user.lang" value="Java"
+                   name="lang">Java
+        </label><br />
+        <label>
+            <input type="radio" ng-model="user.lang" value="C#"
+                   name="lang">C#
+        </label><br />
+        <label>
+            <input type="radio" ng-model="user.lang" value="PHP"
+                   name="lang">PHP
+        </label><br />
+        <label>
+            <input type="radio" ng-model="user.lang" value="Python"
+                   name="lang">Python
+        </label><br />
+
+        <p>Your favorite language is: {{user.lang}}</p>
+
+        <p>
+            <label>
+                <input type="checkbox" ng-model="user.interest">
+                Are you interested in learning more programming
+                languages?
+            </label>
+        </p>
+
+
+        <p>Interested in learning a language? {{user.interest}}</p>
+        <hr>
+    </form>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/LanguageController.js"></script>
+</body>
+</html>

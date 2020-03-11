@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="shipperForm" role="form" class="form-horizontal"  ng-submit="submit()">
+            <fieldset>
+                <legend>{{formTitle}}</legend>
+                <div class="form-group" ng-show="!isNew">
+                    <label  class="col-md-2 control-label">Id</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" name="inputId" value="{{shipper.ShipperId}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Company name</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputCompanyName" placeholder="Enter company name here ..."  ng-model="shipper.CompanyName"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Phone</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputPhone" placeholder="Enter phone here ..."  ng-model="shipper.Phone" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-primary">{{formTitle}}</button>
+                        <button type="button" class="btn" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

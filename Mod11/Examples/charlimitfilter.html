@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating a Filter for Repeats</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Creating a Filter for Repeats</h1>
+      </div>
+        <div ng-controller="LimitController ">
+    Unfiltered
+      <ul>
+        <li ng-repeat="item in foods">
+          {{ item.name }}
+        </li>
+      </ul>
+      <hr>
+    Filtered
+      <ul>
+        <li ng-repeat="item in foods">
+          {{ item.name|charLimit:5 }}
+        </li>
+      </ul>
+  </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/LimitController.js"></script>
+<script src="scripts/filters/charLimitFilter.js"></script>
+</body>
+</html>

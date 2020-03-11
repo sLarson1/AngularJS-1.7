@@ -1,0 +1,28 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+  <div ng-controller="FoodController">
+    Unfiltered
+      <ul>
+        <li ng-repeat="item in foods">
+          {{ item.name }}
+        </li>
+      </ul>
+      <hr>
+    Filtered
+      <ul>
+        <li ng-repeat="item in foods | finde">
+          {{ item.name }}
+        </li>
+      </ul>
+  </div>
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/FoodController.js"></script>
+  <script src="scripts/filters/findeFilter.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="cityApp">
+<head>
+  <title>Using ngShow</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container" ng-controller="CityController">
+
+    <div class="page-header text-center">
+       <h1>Using ngShow</h1>
+    </div>
+
+    <!-- Cities  -->
+    <div class="row">
+      <div class="col-xs-6">
+        <form>
+          <div class="form-group">
+            <label>Type a City</label>
+            <input type="text" class="form-control" ng-model="city">
+            <span ng-bind="cities"></span>  
+          </div>
+        </form>
+      </div>
+      
+      <div class="col-xs-6">
+        <img src="images/cities/london.jpg" class="img-responsive img-thumbnail" ng-show="city == 'london'">
+        <img src="images/cities/new-york.jpg" class="img-responsive img-thumbnail" ng-show="city == 'new york'">
+        <img src="images/cities/tokyo.jpg" class="img-responsive img-thumbnail" ng-show="city == 'tokyo'">
+        <img src="images/cities/paris.jpg" class="img-responsive img-thumbnail" ng-show="city == 'paris'">
+        <img src="images/cities/rio.jpg" class="img-responsive img-thumbnail" ng-show="city == 'rio'">
+      </div>
+    </div>
+    
+</div>
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/Cities.js"></script>    
+</body>
+</html>

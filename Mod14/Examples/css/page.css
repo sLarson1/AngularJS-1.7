@@ -1,0 +1,57 @@
+@charset "utf-8";
+/* CSS Document */
+.page {
+	bottom: 0;
+	position: absolute;
+	top: 50px;
+	width: 90%;
+}
+.about.ng-leave, .home.ng-leave, .contact.ng-leave {
+	-webkit-animation: slideOutLeft 0.5s both ease-in;
+	-moz-animation: slideOutLeft 0.5s both ease-in;
+	animation: slideOutLeft 0.5s both ease-in;
+}
+.about.ng-enter, .home.ng-enter, .contact.ng-enter {
+	-webkit-animation: slideInRight 0.5s both ease-in;
+	-moz-animation: slideInRight 0.5s both ease-in;
+	animation: slideInRight 0.5s both ease-in;
+}
+ @keyframes slideInRight {
+ from {
+transform: translateX(100%)
+}
+ to {
+transform: translateX()
+}
+}
+@-moz-keyframes slideInRight {
+ from {
+-moz-transform: translateX(100%)
+}
+ to {
+-moz-transform: translateX()
+}
+}
+@-webkit-keyframes slideInRight {
+ from {
+-webkit-transform: translateX(100%)
+}
+ to {
+-webkit-transform: translateX()
+}
+}
+@keyframes slideOutLeft {
+ to {
+transform: translateX(-100%)
+}
+}
+@-moz-keyframes slideOutLeft {
+ to {
+-moz-transform: translateX(-100%)
+}
+}
+@-webkit-keyframes slideOutLeft {
+ to {
+-webkit-transform: translateX(-100%)
+}
+}

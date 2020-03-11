@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Simple SPA</title>
+    <style>
+        #menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        #menu li {
+            float: left;
+        }
+
+            #menu li a {
+                display: inline-block;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+            }
+
+                #menu li a:hover {
+                    background-color: #111;
+                }
+    </style>
+</head>
+<body ng-app="myApp">
+    <nav id="menu">
+        <img src="images/logo.jpg" style="width:200px" />
+        <ul>
+            <li><a href="#/home" activeLink>Home</a></li>
+            <li><a href="#/about" activeLink>About</a></li>
+            <li><a href="#/contact" activeLink>Contact Us</a></li>
+        </ul>
+    </nav>
+    <div id="main">
+        <div ng-view><!-- replaceable content here --></div>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/ProductsController.js"></script>
+    <script src="scripts/controllers/AboutUsController.js"></script>
+    <script src="scripts/controllers/ContactUsController.js"></script>
+</body>
+</html>

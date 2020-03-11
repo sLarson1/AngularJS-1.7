@@ -1,0 +1,33 @@
+﻿<!doctype html>
+<html ng-app="leafletDemo">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using UI Leaflet</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/leaflet.css">
+</head>
+<body ng-controller="MainController">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Using UI Leaflet</h1>
+      </div>
+      <leaflet lf-center="center" markers="markers" height="480px" width="100%"></leaflet>
+    </div>
+  </div>
+</div>
+<!-- AngularJS -->
+<script src="scripts/angular.min.js"></script>
+<!-- Leaflet Library -->
+<script src="scripts/leaflet.js"></script>
+<!-- Simple Logger -->
+<script src="scripts/angular-simple-logger.min.js"></script>
+<!-- UI Leaflet -->
+<script src="scripts/ui-leaflet.min.js"></script>
+<!-- Accordion -->
+<script src="scripts/leafletApp.js"></script>
+</body>
+</html>

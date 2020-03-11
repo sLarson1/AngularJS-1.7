@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* CSS Document */
+ 
+.div1 {
+	background: #cc0000;
+	cursor:pointer;
+	padding:5px;
+	width:auto;
+	font-weight:700;
+	border-radius:10px;
+	color:#FFF;
+	position: absolute;
+}
+.div2 {
+	background: #66cc00;
+	cursor:pointer;
+	padding:5px;
+	width:auto;
+	font-weight:700;
+	border-radius:10px;
+	position: absolute;
+}
+.animate.ng-enter, .animate.ng-leave {
+	transition: all linear 500ms;
+}
+.animate.ng-enter, .animate.ng-leave.ng-leave-active {
+	opacity: 0;
+}
+.animate.ng-leave, .animate.ng-enter.ng-enter-active {
+	opacity: 1;
+}

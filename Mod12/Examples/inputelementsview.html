@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Forms</title>
+	<meta charset="utf-8" />
+  <link href="custom.css" rel="stylesheet" />
+</head>
+<body ng-app="myApp">
+    <form name="userForm" ng-controller="UserController" novalidate>
+        <p>
+            <label>First Name:</label>
+            <input type="text" ng-model="user.first"> {{user.first}}
+        </p>
+        <p>
+            <label>Last Name:</label>
+            <input type="text" ng-model="user.last"> {{user.last}}
+        </p>
+        <p>
+            <label>Password:</label>
+            <input type="password" ng-model="user.pw"> {{user.pw}}
+        </p>
+        <p>
+            <label>Email:</label>
+            <input type="email" ng-model="user.email"> {{user.email}}
+        </p>
+        <p>
+            <label>Website?:</label>
+            <input type="url" ng-model="user.url"> {{user.url}}
+        </p>
+            <hr>
+    </form>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/UserController.js"></script>
+</body>
+</html>

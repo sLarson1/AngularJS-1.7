@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Filters</title>
+    <meta charset="utf-8" />
+    <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="TVShowController">
+    <ul>
+        <li ng-repeat="show in shows | limitTo : 5">
+            {{ show | json }}
+        </li>
+    </ul>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/TVShowController.js"></script>
+</body>
+</html>

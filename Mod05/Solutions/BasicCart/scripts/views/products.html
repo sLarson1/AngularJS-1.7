@@ -1,0 +1,22 @@
+﻿<div id="prodListWrapper">
+  <form class="form-group">
+    <div>
+      <input type="search" class="form-control" placeholder="Search for products..." ng-model="searchString" />
+    </div>
+  </form>
+  <div>
+    <ul class="list-unstyled">
+      <li class="product" ng-repeat="prod in products|filter:searchString" style="background: white url(images/icons/{{prod.imgUrl}}) left center no-repeat">
+        <div class="product-details clearfix">
+          <h3>{{prod.name|uppercase}}</h3>
+          <ul class="list-unstyled list-inline">
+            <li>Product #:{{prod.id}}</li>
+            <li>Price:{{prod.price|currency}}</li>
+          </ul>
+          <p>{{prod.description}}</p>
+          <button class="btn btn-info pull-right" ng-click="addToCart(prod)" bs-modal="modal" data-animation="am-fade-and-scale">Add to Cart</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app>
+<head>
+  <title>Using ngClass</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style type="text/css">
+    .hasError {
+      background-color: yellow;
+    }
+    .hasSuccess {
+      background-color: white;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="well col-md-3">
+      <p>Has Error <input type="checkbox" ng-model="hasError" /></p>
+      <label>First Name</label>
+      <input type="text" class="form-control" 
+       ng-class="hasError ? 'hasError':'hasSuccess'" />
+      <br />
+      <label>Last Name</label>
+      <input type="text" class="form-control" 
+       ng-class="hasError ? 'hasError':'hasSuccess'" />
+    </div>
+  </div>
+  <script src="scripts/angular.min.js"></script>
+</body>
+</html>

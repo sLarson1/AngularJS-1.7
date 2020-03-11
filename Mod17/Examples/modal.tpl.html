@@ -1,0 +1,42 @@
+<div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header" ng-show="title">
+        <button type="button" class="close" ng-click="$hide()">&times;</button>
+        <h4 class="modal-title" ng-bind-html="title"></h4>
+      </div>
+      <div class="modal-body" ng-show="content">
+        <div class="row">
+          <div class="col-xs-6"> <img src="images/hamburger_lg.png" class="thumbnail text-center">
+          <div class="caption">
+            <h4>The Works Hamburger</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mollis massa, in egestas justo mollis eu. Cras ac sodales odio, egestas efficitur odio. </p>
+            <ul>
+              <li>Lettuce</li>
+              <li>Tomato </li>
+              <li>Pulled Pork</li>
+              <li>Fried Onions</li>
+              <li>BBQ Sauce </li>
+              <li>Parmesean Fries</li>
+            </ul>
+          </div>
+          </div>
+           <div class="col-xs-6"> <img src="images/espresso.png" class="thumbnail text-center">
+          <div class="caption">
+            <h4>Banana Espresso Milk Shake</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis mollis massa, in egestas justo mollis eu. Cras ac sodales odio, egestas efficitur odio. </p>
+            <ul>
+              <li>Chocolate Ice Cream</li>
+              <li>Double Shot Espresso</li>
+              <li>Frozen Bananas</li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" ng-click="$hide()">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

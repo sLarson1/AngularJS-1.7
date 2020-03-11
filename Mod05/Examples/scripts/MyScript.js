@@ -1,0 +1,2 @@
+﻿var user = 'Devan';
+logUser();

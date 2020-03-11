@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html ng-app="northwindApp">
+<head>
+    <meta charset="utf-8" />
+    <title>Northwind Traders</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-controller="employeesController">
+    <div class="container">
+        <div class="row">
+            <div>
+                <h1>Northwind Traders</h1>
+            </div>
+             <div class="btn-toolbar">
+                <div class="btn-group">
+                    <a href="#/employees" class="btn btn-success">Employees</a>
+                    <a href="#/products" class="btn btn-success">Products</a>
+                    <a href="#/shippers" class="btn btn-success">Shippers</a>
+                </div>
+                <div class="btn-group">
+                    <a href="/api/employees" class="btn btn-warning">Employees API</a>
+                    <a href="/api/products" class="btn btn-warning">Products API</a>
+                    <a href="/api/shippers" class="btn btn-warning">Shippers API</a>
+                </div>
+            </div>
+        </div> 
+           
+        <div class="row" ng-view>
+        </div>
+    </div>
+
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-route.js"></script>
+    <script src="scripts/angular-resource.js"></script>
+
+    <script src="scripts/app.js"></script>
+
+    <!-- todo: add reference to employee service and controllers -->
+    <script src="scripts/services/employeeService.js"></script>
+    <script src="scripts/controllers/employeeController.js"></script>
+    <script src="scripts/controllers/employeesController.js"></script>
+    
+    <!-- todo: add reference to product service and controllers -->
+
+    <!-- todo: add reference to shipper service and controllers -->
+</body>
+</html>

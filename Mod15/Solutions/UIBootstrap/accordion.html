@@ -1,0 +1,35 @@
+<!doctype html>
+<html ng-app="accordionApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Creating a Dynamic Accordion</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="MainController">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Creating a Dynamic Accordion</h1>
+      </div>
+      <!-- Accordion -->
+      <uib-accordion>
+        <uib-accordion-group ng-repeat="group in groups" panel-class="{{group.class}}">
+          <uib-accordion-heading>
+              <i class="{{group.glyph}}"></i> {{group.title}}</uib-accordion-heading>
+          <span ng-bind-html="group.content">{{group.content}}</span> <span ng-bind-html="group.img">{{group.img}}</span>
+        </uib-accordion-group>
+      </uib-accordion>
+    </div>
+  </div>
+</div>
+<!-- AngularJS --> 
+<script src="scripts/angular.min.js"></script> 
+<script src="scripts/angular-animate.min.js"></script> 
+<script src="scripts/angular-sanitize.min.js"></script> 
+<script src="scripts/ui-bootstrap-tpls-0.14.3.min.js"></script> 
+<script src="scripts/accordionApp.js"></script>
+</body>
+</html>

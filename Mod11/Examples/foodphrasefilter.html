@@ -1,0 +1,29 @@
+﻿<!doctype html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body ng-app="myApp">
+  <div ng-controller="FoodController">
+    Unfiltered
+      <ul>
+        <li ng-repeat="foodItem in foods">
+          {{ foodItem.name }}
+        </li>
+      </ul>
+      <hr>
+    Filtered<br/>
+      <input type="text" ng-model="charSeq" placeholder="Type filter characters here">
+      <ul>
+        <li ng-repeat="foodItem in foods | foodPhrase:charSeq">
+          {{ foodItem.name }}
+        </li>
+      </ul>
+  </div>
+  <script src="scripts/angular.min.js"></script>
+   <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/FoodController.js"></script>
+  <script src="scripts/filters/foodPhraseFilter.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@charset "utf-8";
+/* CSS Document */
+.showhide1 {
+	-webkit-animation-name: bounceIn;
+	animation-name: bounceIn;
+}
+.showhide1.ng-hide {
+	-webkit-animation-name: bounceOut;
+	animation-name: bounceOut;
+}
+.showhide2 {
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation-name: flipInX;
+	animation-name: flipInX;
+}
+.showhide2.ng-hide {
+	-webkit-animation-name: flipOutX;
+	animation-name: flipOutX;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+}
+.showhide3 {
+	-webkit-animation-name: slideInLeft;
+	animation-name: slideInLeft;
+}
+.showhide3.ng-hide {
+	-webkit-animation-name: slideOutRight;
+	animation-name: slideOutRight;
+}

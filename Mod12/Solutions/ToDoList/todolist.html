@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToDo List</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/list.css">
+</head>
+<body ng-app="toDoApp">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>To Do List</h1>
+      </div>
+      <div ng-controller="TaskController">
+        <form ng-submit="addItem()">
+          <div class="input-group">
+            <input type="text" ng-model="item" class="form-control">
+            <span class="input-group-btn">
+            <input type="submit" value="Add Item" class="btn btn-primary">
+            </span>
+            </div>
+        </form>
+        <ul>
+          <li ng-repeat="task in tasks track by $index" class="input-group">{{ task }} <span class="input-group-btn">
+            <button ng-click="deleteItem()" class="btn btn-danger">X</button>
+            </span> </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="scripts/angular.min.js"></script> 
+<script src="scripts/ToDoApp.js"></script>
+</body>
+</html>

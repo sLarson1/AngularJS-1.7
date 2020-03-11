@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Filters</title>
+    <meta charset="utf-8" />
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="EmployeeController2">
+        <div>
+            <p>Sort Column: {{ sortColumn}}</p>
+            <p>Ascending Sort: {{ !reverseSort }}</p>
+        </div>
+        
+        <table>
+            <tr>
+                <th ng-click="sortColumn='name'; reverseSort = !reverseSort">Name</th>
+                <th ng-click="sortColumn='jobTitle'; reverseSort = !reverseSort">Job Title</th>
+                <th ng-click="sortColumn='city'; reverseSort = !reverseSort">City</th>
+                <th ng-click="sortColumn='pay'; reverseSort = !reverseSort">Pay</th>
+                <th ng-click="sortColumn='startDate'; reverseSort = !reverseSort">Start Date</th>
+           </tr>
+            <tr ng-repeat="emp in employees | orderBy : sortColumn : reverseSort">
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.jobTitle }}</td>
+                <td>{{ emp.city | uppercase }}</td>
+                <td>{{ emp.pay | currency }}</td>            
+                <td>{{ emp.startDate | date:'dd-MMM-yy'}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/EmployeeController2.js"></script>
+</body>
+</html>

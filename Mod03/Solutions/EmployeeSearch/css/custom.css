@@ -1,0 +1,15 @@
+#employees {
+	text-align: center;
+}
+.resultwrapper {
+	width: auto;
+	background: #f6f6f6;
+	float: left;
+	padding: 5px;
+	border-radius: 5px;
+	text-align: center;
+	margin: 10px;
+}
+#xmlgallery h2 {
+	color: #045FB4;
+}

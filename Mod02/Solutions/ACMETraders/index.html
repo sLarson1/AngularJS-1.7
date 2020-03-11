@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="stockApp">
+<head>
+    <title>ACME Financial</title>
+	<meta charset="utf-8" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+</head>
+<body ng-init="title='ACME Traders'">
+    <div class="container" ng-controller="StockController">
+        <img ng-src="{{logo}}" />
+        <h1>Welcome to {{title}}</h1>
+        <p>{{customer}}'s Portfolio - {{today|date}}</p>
+        <table class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="stock in stocks">
+                    <td>{{stock.symbol}}</td>
+                    <td>{{stock.name}}</td>
+                    <td>{{stock.price|currency}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/myApp.js"></script>
+</body>
+</html>
+
+

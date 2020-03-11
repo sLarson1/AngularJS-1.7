@@ -1,0 +1,21 @@
+.btn {background-color: #5bc0de;
+    color:white}
+
+.ng-invalid .btn {
+    background-color: gray;
+    color:white;
+}
+
+input:focus {
+    background: lightgoldenrodyellow;}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid #ff0000;
+}
+
+input.ng-valid.ng-touched{
+    border: 1px solid lawngreen;
+}
+
+.error {color: #ff0000;
+}

@@ -1,0 +1,30 @@
+﻿<!doctype html>
+<html ng-app="tooltipApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AngularStrap Tooltip</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/angular-motion.min.css">
+</head>
+<body>
+<div class="container" ng-controller="MainController">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>AngularStrap Tooltip</h1>
+      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam semper ornare ligula facilisis auctor. Phasellus vestibulum tortor at neque pharetra, vel bibendum lacus accumsan. Nulla rhoncus, turpis quis placerat malesuada, elit augue mollis massa, in tincidunt ante neque vitae purus.</p>
+      <p>Lorem ipsum dolor sit amet, <a href="" data-animation="am-flip-x" bs-tooltip="tooltip" data-placement="bottom" data-title="Lorem ipsum dolor sit amet">consectetur adipiscing</a> elit. Nam semper ornare ligula facilisis auctor. Phasellus vestibulum tortor at neque pharetra, vel bibendum lacus accumsan. Nulla rhoncus, turpis quis placerat malesuada, elit augue mollis massa, in tincidunt ante neque vitae purus.</p>
+    </div>
+  </div>
+</div>
+<!-- AngularJS -->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<script src="scripts/angular-strap.min.js"></script>
+<script src="scripts/angular-strap.tpl.min.js"></script>
+<script src="scripts/tooltipApp.js"></script>
+</body>
+</html>

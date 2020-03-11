@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html ng-app="MyApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Creating a Set Filter</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Creating a Set Filter</h1>
+                </div>
+                <div ng-controller="ListController">
+                    Unfiltered
+                    <ul>
+                        <li ng-repeat="item in items"> {{ item.name }} </li>
+                    </ul>
+                    <hr>
+                    Filtered
+
+                    <ul>
+                        <li ng-repeat="item in items | set | orderBy:'name'"> {{ item.name }} </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/ListController.js"></script>
+    <script src="scripts/filters/SetFilter.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html ng-app="customersApp">
+<head>
+    <meta charset="utf-8">
+
+    <title>Customers Service</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="CustomerController">
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="x in customers">
+                    <td>{{ x.Name }}</td>
+                    <td>{{ x.Country }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="js/angular.min.js"></script>
+    <script src="js/customersApp.js"></script>
+    <script src="js/controllers/CustomerController.js"></script>
+    <script src="js/services/CustomerService.js"></script>
+
+</body>
+</html>

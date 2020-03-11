@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Nested Controllers</title>
+</head>
+<body>
+    <div ng-controller="EmployeeController as emp">
+        {{emp.name}} makes {{emp.salary|currency}} as a {{emp.title}}
+        <div ng-controller="ManagerController as mgr">
+            {{mgr.name}} makes {{mgr.salary|currency}} as a {{mgr.title}}
+            <div ng-controller="InternController as int">
+                {{int.name}} makes {{int.salary|currency}} as a(n) {{int.title}}
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/NestedApp.js"></script>
+    <script src="scripts/controllers/MultipleControllers.js"></script>
+</body>
+</html>

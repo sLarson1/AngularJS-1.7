@@ -1,0 +1,26 @@
+﻿<!doctype html>
+<html ng-app="classOddApp">
+<head>
+<meta charset="utf-8">
+<title>ngClassOdd Directive</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>  
+     .odd {  
+       background: #C32;  
+       color: #FFF;  
+     }  
+   </style>  
+</head>
+<body>
+  <div class="container">
+     <h3>Using ngClassOdd in AngularJS</h3>  
+           <div ng-controller="WeekdayController">  
+            <div ng-repeat="wd in weekdays" ng-class-odd="'odd'">  
+              {{wd}}  
+            </div>  
+     </div>  
+</div>
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/ngClassOdd.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="meetingApp">
+<head>
+    <title>Using ngPluralize</title>
+    
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    
+        <div class="container" ng-controller="MeetingController">
+            <div class="col-md-3">
+                <p>Type in a list of comma ( , ) separated names.</p>
+                <textarea class="form-control" ng-model="attendees" ng-list=","></textarea>
+                <pre>{{attendees|json}}</pre>
+                <ng-pluralize count="attendees.length" offset="2" when="{
+            '0': 'There are currently no attendees.',
+            '1': '{{attendees[0]}} is attending.',
+            '2': '{{attendees[0]}} and {{attendees[1]}} are attending.',
+            'one': '{{attendees[0]}}, {{attendees[1]}} and one other person are attending.',
+            'other': '{{attendees[0]}}, {{attendees[1]}} and {} other people are attending.'}">
+                </ng-pluralize>
+            </div>
+        </div>
+
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/ngPluralize.js"></script>
+</body>
+</html>

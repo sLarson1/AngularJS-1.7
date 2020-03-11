@@ -1,0 +1,43 @@
+﻿<!doctype html>
+<html ng-app="loanApp" >
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Loan Calculator</title>
+<!-- Downloaded Bootstrap CSS -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<!-- Custom CSS -->
+<link rel="stylesheet" href="css/custom.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Car Loan Calculator</h1>
+      </div>
+      <form ng-controller="LoanController">
+        <div class="item">
+          <h2>Amount:</h2>
+          <input type="range" id="amount" name="amount" ng-model="amount" min="5000" max="30000" step="1000" value="5000">
+          <h3>${{amount}}</h3>
+        </div>
+        <hr>
+        <div class="item">
+          <h2>Term:</h2>
+          <input type="range" id="term" name="term" ng-model="term" min="24" max="60" step="12" value="24">
+          <h3>{{term}}</h3>
+        </div>
+        <div class="item well">
+          <h2>Monthly Payments at 4% Interest: <span class="sum">{{total | currency}}</span></h2>
+          <h2>Monthly Payments at 1.99% Interest: <span class="sum">{{total2 | currency}}</span></h2>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<script src="scripts/angular.min.js"></script> 
+<script src="scripts/LoanApp.js"></script>
+</body>
+</html>

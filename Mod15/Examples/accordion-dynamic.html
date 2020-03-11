@@ -1,0 +1,32 @@
+<!doctype html>
+<html ng-app="accordionDemo">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Using the UI Bootstrap - Accordion</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body ng-controller="MainController">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Using the UI Bootstrap - Accordion</h1>
+      </div>
+      <uib-accordion>
+        <uib-accordion-group heading="{{group.title}}" ng-repeat="group in groups"><span ng-bind-html="group.content"></span></uib-accordion-group>
+      </uib-accordion>
+    </div>
+  </div>
+</div>
+<!-- AngularJS -->
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<script src="scripts/angular-sanitize.min.js"></script>
+<!-- UI Bootstrap -->
+<script src="scripts/ui-bootstrap-tpls-0.14.3.min.js"></script>
+<!-- Accordion -->
+<script src="scripts/dynamicAccordionApp.js"></script>
+</body>
+</html>

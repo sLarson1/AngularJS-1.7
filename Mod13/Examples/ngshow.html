@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Using ngShow To Display Error Messages</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/cloak.css" rel="stylesheet">
+    <link href="css/val.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Using ngShow To Display Error Messages</h1>
+                </div>
+                <form name="client" ng-controller="MainController" novalidate>
+                    <div class="form-group">
+                        <label for="firstName">First Name:</label>
+                        <input type="text" name="firstName" ng-model="user.first" ng-required="true" class="form-control">
+                    </div>
+                    <div role="alert"> <span class="error" ng-show="client.firstName.$error.required"> Your First Name Is Required </span> </div>
+                    <div class="form-group">
+                        <label for="lastName">Last Name:</label>
+                        <input type="text" name="lastName" ng-model="user.last" ng-required="true" ng-minlength="2" ng-maxlength="15" class="form-control">
+                    </div>
+                    <div role="alert"> <span class="error" ng-show="client.lastName.$error.required"> Your Last Name Is Required </span> <span class="error" ng-show="client.lastName.$error.minlength"> Your Last Name Is Too Short </span> <span class="error" ng-show="client.lastName.$error.maxlength"> Your Last Name is Too Long</span> </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/form-controller.js"></script>
+</body>
+</html>

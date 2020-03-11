@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Data Binding</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app>
+
+    <h3>NBA Atlantic Division Teams</h3>
+    <div ng-init="teams=['Celtics','Knicks','Nets','Raptors','Sixers']">
+
+        <ul>
+            <li ng-repeat="team in teams">
+                {{ team }}
+            </li>
+        </ul>
+
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+</body>
+</html>

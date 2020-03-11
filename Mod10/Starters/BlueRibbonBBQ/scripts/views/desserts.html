@@ -1,0 +1,16 @@
+<div class="panel panel-info">
+  <div class="panel-heading">
+    <h3>Desserts</h3>
+  </div>
+  <div class="panel-body">
+    <div class="row" ng-repeat="d in desserts">
+      <div class="col-md-9">
+        <h4>{{d.name}}</h4>
+        <p class="desc">{{d.description}}</p>
+      </div>
+      <div class="col-md-3">
+        <p>{{d.price|currency}}</p>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+﻿<!doctype html>
+<html ng-app="imgGallery">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/gallery.css">
+</head>
+<body ng-controller="MainController">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Image Gallery</h1>
+                </div>
+
+                <!-- slider container -->
+                <div class="container slider">
+
+                    <!-- enumerate all photos -->
+                    <img ng-repeat="photo in photos" class="slide img-responsive" ng-show="isActive($index)" ng-src="{{photo.src}}" />
+
+                    <!-- prev / next controls -->
+                    <a class="arrow prev" href="#" ng-click="showPrev()"></a> <a class="arrow next" href="#" ng-click="showNext()"></a>
+
+                    <!-- extra navigation controls -->
+                    <ul class="nav">
+                        <li ng-repeat="photo in photos" ng-class="{'active':isActive($index)}"> <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index);" /> </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-animate.min.js"></script>
+    <script src="scripts/galleryApp.js"></script>
+</body>
+</html>

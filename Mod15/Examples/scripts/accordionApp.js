@@ -1,0 +1,1 @@
+var myApp = angular.module('accordionDemo', ['ngAnimate', 'ui.bootstrap']);

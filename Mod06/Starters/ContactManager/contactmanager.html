@@ -1,0 +1,42 @@
+﻿<!doctype html>
+<html ng-app="managerApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact Manager</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>Contact Manager</h1>
+      </div>
+      <div>
+        <form>
+          <div class="form-group">
+            <label for="txtName">Name:</label>
+            <input type="text" ng-model="newcontact.name" id="txtName" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="txtEmail">E-mail:</label>
+            <input type="text" ng-model="newcontact.email" id="txtEmail" class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="txtPhone">Phone:</label>
+            <input type="text" ng-model="newcontact.phone" id="txtPhone" class="form-control"  />
+          </div>
+          <input type="hidden" ng-model="newcontact.id">
+          <button ng-click="saveContact()" class="btn btn-primary">Save Contact</button>
+        </form>
+        
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

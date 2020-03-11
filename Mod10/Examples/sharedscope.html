@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="sharedScopeApp">
+<head>
+<meta charset="UTF-8">
+<title>Shared Scope Example</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div>
+  <div ng-controller="ScopeController">
+    <div>Parent scope: {{name}}</div>
+    <div my-directive></div>
+    <br>
+    <br>
+    <button ng-click="reverseName()">Click to Change</button>
+  </div>
+</div>
+<script src="scripts/angular.min.js"></script> 
+<script src="scripts/sharedscope.js"></script>
+</body>
+</html>

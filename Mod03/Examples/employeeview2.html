@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Filters</title>
+    <meta charset="utf-8" />
+    <style>
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 3px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="EmployeeController">
+        <h2>There are {{ employees.length }} employees:</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Job Title</th>
+                <th>City</th>
+                <th>Pay</th>
+                <th>Start Date</th>
+           </tr>
+            <tr ng-repeat="emp in employees | orderBy: '-pay'">
+                <td>{{ emp.name }}</td>
+                <td>{{ emp.jobTitle }}</td>
+                <td>{{ emp.city | uppercase }}</td>
+                <td>{{ emp.pay | currency }}</td>            
+                <td>{{ emp.startDate | date:'dd-MMM-yy'}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/EmployeeController.js"></script>
+</body>
+</html>

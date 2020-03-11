@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Formatting</title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myApp" >
+    <div ng-controller="DateFiltersController">
+        <p>Date using 'short': {{ enrollment | date:'short'}}</p>
+        <p>Date using 'medium': {{ enrollment | date:'medium'}}</p>
+        <p>Date using 'fullDate': {{ enrollment | date:'fullDate'}}</p>
+        <hr />
+        <p>Date using 'yyyy-MM-dd h:mm a': {{ enrollment | date:'yyyy-MM-dd h:mm a'}}</p>
+        <p>Date using 'dd-MMM-yy HH:mm:ss': {{ enrollment | date:'dd-MMM-yy HH:mm:ss'}}</p>
+        <p>Date using 'dd/MM/yy 'at' HH:mm Z': {{ enrollment | date:"dd/MM/yy 'at' HH:mm Z"}}</p>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/DateFiltersController.js"></script>
+</body>
+</html>

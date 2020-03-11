@@ -1,0 +1,38 @@
+﻿<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Number Test</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/cloak.css" rel="stylesheet">
+    <link href="css/val.css" rel="stylesheet">
+</head>
+<body ng-cloak>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="page-header">
+                    <h1>Number Test</h1>
+                </div>
+                <form name="numForm" ng-controller="MainController" ng-submit="formValid(numForm.$valid)" novalidate>
+                    <div class="form-group">
+                        <label for="num">Enter a Number:</label>
+                        <input type="text" name="num"
+                               ng-model="user.num"
+                               ng-required="true"
+                               ng-pattern="/^\d+$/"
+                               class="form-control">
+                    </div>
+                    <p>
+                        <input type="submit" value="Submit" class="btn btn-info">
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/ngpatternApp.js"></script>
+</body>
+</html>

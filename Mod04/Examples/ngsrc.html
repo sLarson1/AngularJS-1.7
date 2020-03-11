@@ -1,0 +1,28 @@
+<!doctype html>
+<html ng-app="imgApp">
+<head>
+  <title>Using ngSrc</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+<body>
+  <div class="container" ng-controller="ImageController">
+
+    <div class="page-header text-center">
+       <h1>Using ngSrc</h1>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <h2>Using src Attribute</h2>
+        <img src="images/cities/{{img}}" alt="{{caption}}" class="img-responsive img-thumbnail">
+        <h2>Using ngSrc Directive</h2>
+        <img ng-src="images/cities/{{img}}" alt="{{caption}}" class="img-responsive img-thumbnail">
+      </div>
+    </div>
+    
+
+  </div>
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/ngSrc.js"></script>    
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!doctype html>
+<html ng-app="modalApp">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AngularStrap Modal</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/angular-motion.min.css">
+
+</head>
+<body ng-controller="MainController">
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="page-header">
+        <h1>AngularStrap Modal</h1>
+      </div>
+      <table class="table table-bordered table-striped table-responsive">
+        <thead>
+          <tr class="info">
+            <th>Name</th>
+            <th>Title</th>
+            <th>More Info</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="employee in employees">
+            <td>{{employee.name}}</td>
+            <td>{{employee.title}}</td>
+            <td><a class="btn btn-primary"
+                    ng-click="openModal(employee)"
+                    bs-model="model">
+                    <i class="glyphicon glyphicon-info-sign"></i>                    
+                  </a></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<!-- AngularJS --> 
+<script src="scripts/angular.min.js"></script>
+<script src="scripts/angular-animate.min.js"></script>
+<script src="scripts/angular-sanitize.min.js"></script>
+<script src="scripts/angular-strap.min.js"></script>
+<script src="scripts/angular-strap.tpl.min.js"></script>
+<script src="scripts/modalApp.js"></script>
+</body>
+</html>

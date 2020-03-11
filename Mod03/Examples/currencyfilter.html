@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Using Filters</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app>
+   <div ng-init="products=[
+          {name: 'Football', price: 59.99},
+          {name: 'Basketball', price: 25.99},
+          {name: 'Soccer Ball', price: 19.99},
+          {name: 'Baseball', price: 5.49}
+    ]">
+
+    <ul>
+      <li ng-repeat="product in products">
+        {{product.name}} - {{product.price | currency}}
+      </li>
+    </ul>
+  </div>
+  <script src="scripts/angular.min.js"></script>
+  </body>
+</html>

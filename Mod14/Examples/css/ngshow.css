@@ -1,0 +1,7 @@
+.showhide {
+  transition: 1s linear all;  
+  opacity: 1;
+}
+.showhide.ng-hide {
+  opacity: 0;
+}

@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+  <title>Nested Controllers</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div ng-controller="Parent1Controller">
+            <h3>{{ message }}</h3>
+            <p ng-controller="Child1Controller">
+                {{ message }}
+            </p>
+        </div>
+        <div ng-controller="Parent2Controller">
+            <h3>{{ message }}</h3>
+            <p ng-controller="Child2Controller">
+                {{ message }}
+            </p>
+        </div>
+    </div>
+
+  <script src="scripts/angular.min.js"></script>
+  <script src="scripts/NestedApp.js"></script>    
+  
+</body>
+</html>

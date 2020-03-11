@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Data Binding</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="CourseController2">
+
+        <p>Course: {{ courseTitle }}</p>
+        <p>Instructor: {{ instructor }}</p>
+        <p>Location: {{ location }}</p>
+
+        <p>
+            <button ng-click="setLocation('Chelmsford, MA  USA')">Run class in USA</button>&nbsp;&nbsp;
+            <button ng-click="setLocation('London, England')">Run class in UK</button>&nbsp;&nbsp;
+            <button ng-click="setLocation('Toronto, Ontario')">Run class in Canada</button>
+        </p>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/CourseController2.js"></script>
+</body>
+</html>

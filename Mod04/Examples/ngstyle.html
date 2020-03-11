@@ -1,0 +1,24 @@
+<!doctype html>
+<html ng-app>
+<head>
+  <title>Using ngStyle</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  
+    
+</head>
+<body>
+  <div class="container" ng-init="color='silver'">
+<h1 ng-style="{background:color}">Tours</h1>
+<p>Pick a Season:</p>
+<form>
+<label><input type="radio" ng-model="color" name="color" value="#ff66ff" checked>Spring</label><br>
+<label><input type="radio" ng-model="color" name="color" value="#00cc00">Summer</label><br>
+<label><input type="radio" ng-model="color" name="color" value="#ff9933">Fall</label><br>
+<label><input type="radio" ng-model="color" name="color" value="#99ccff">Winter</label><br>
+</form>
+
+    </div>
+  <script src="scripts/angular.min.js"></script>
+  
+</body>
+</html>

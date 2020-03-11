@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shopping Cart with AngularJS</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/cart.css">
+
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="well"> <img src="images/cart_header.png" height="87" width="150" alt="logo" class="img-circle" /> Angular Store </h1>
+      <p class="text-info">Thanks for shopping at the Angular Store.</p>
+      <p class="text-info">This is your shopping cart. Here you can edit the items, go back to the store, clear the cart, or check out. </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-8">
+      <table class="table table-bordered">
+        <tr class="well">
+          <td><b>Item</b></td>
+          <td class="tdCenter"><b>Quantity</b></td>
+          <td class="tdRight"><b>Price</b></td>
+          <td />
+        </tr>
+        
+        <!-- cart items -->
+        <tr>
+          <td><!--Show name here--></td>
+          <td class="tdCenter"><div class="input-append"> 
+              <input class="span3 text-center" type="tel" readonly />
+              <button class="btn btn-success" type="button">+</button>
+              <button class="btn btn-inverse" type="button">-</button>
+            </div></td>
+          <td class="tdRight"><!--Show price here--></td>
+          <td class="tdCenter" title="remove from cart"><a href="" class="icon-remove"><span class="glyphicon glyphicon-remove"></span></a></td>
+        </tr>
+        <tr class="well">
+          <td><b>Total</b></td>
+          <td class="tdCenter"><b><!--Show Quantity here--></b></td>
+          <td class="tdRight"><b><!--Show Total here--></b></td>
+          <td />
+        </tr>
+      </table>
+        <!-- empty cart message -->
+        <p>
+          <span class="tdCenter"> Your cart is empty. </span>
+        </p>
+    </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-block btn-danger"> <span class="glyphicon glyphicon-trash"></span> Clear </button>
+    </div>
+  </div>
+</div>
+    
+</body>
+</html>

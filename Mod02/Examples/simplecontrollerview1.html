@@ -1,0 +1,20 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Data Binding</title>
+	<meta charset="utf-8" />
+</head>
+<body ng-app="myApp" >
+
+    <div ng-controller="CourseController">
+
+        <p>Course: {{ courseTitle }}</p>
+        <p>Instructor: {{ instructor }}</p>
+        <p>Location: {{ location }}</p>
+
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/CourseController.js"></script>
+</body>
+</html>

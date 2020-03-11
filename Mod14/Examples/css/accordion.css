@@ -1,0 +1,100 @@
+@charset "utf-8";
+/* CSS Document */
+
+.accordion-item {
+	overflow: hidden;
+	margin: 5px;
+}
+.accordion-heading-collapsed {
+	cursor: pointer;
+	padding: 10px;
+	position: relative;
+	z-index: 100000000;
+	color: #000;
+	background: #FFF;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	background: #ffffff;
+	background: url(../images/arrow-down.png) no-repeat right 10px top 10px, -moz-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #ebeaea 51%, #f6f6f6 100%);
+	background: url(../images/arrow-down.png) no-repeat right 10px top 10px, -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffffff), color-stop(50%, #f1f1f1), color-stop(51%, #ebeaea), color-stop(100%, #f6f6f6));
+	background: url(../images/arrow-down.png) no-repeat right 10px top 10px, -webkit-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #ebeaea 51%, #f6f6f6 100%);
+	background: url(../images/arrow-down.png) no-repeat right 10px top 10px, -o-linear-gradient(top, #ffffff 0%, #f1f1f1 50%, #ebeaea 51%, #f6f6f6 100%);
+	background: url(../images/arrow-down.png) no-repeat right 10px top 10px, linear-gradient(to bottom, #ffffff 0%, #f1f1f1 50%, #ebeaea 51%, #f6f6f6 100%);
+	border: 1px solid #000;
+}
+.accordion-heading-expanded {
+	cursor: pointer;
+	z-index: 100000000;
+	padding: 10px;
+	position: relative;
+	color: #FFF;
+	background: url(../images/arrow-up.png) no-repeat right 10px top 10px, #000;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	border: 1px solid #000;
+}
+.accordion-heading-collapsed > span, .accordion-heading-expanded > span {
+	position: absolute;
+	top: 25px;
+	right: 15px;
+	font-size: 20px;
+	line-height: 0px;
+}
+.accordion-content {
+	border-radius: 0 0 5px 5px;
+	border: 1px solid #000;
+	padding: 15px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+.slideDown.ng-hide-remove, .slideDown.ng-hide-add {
+	display: block!important;
+}
+.slideDown.ng-hide-add {
+	animation-name: hide;
+	-webkit-animation-name: hide;
+	animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	animation-timing-function: ease-in;
+	-webkit-animation-timing-function: ease-in;
+}
+ @-webkit-keyframes hide {
+ 0% {
+ -webkit-transform: translateY(0%);
+}
+ 100% {
+ -webkit-transform: translateY(-100%);
+}
+}
+ @keyframes hide {
+ 0% {
+ transform: translateY(0%);
+}
+100% {
+ transform: translateY(-100%);
+}
+}
+.slideDown.ng-hide-remove {
+	animation-name: show;
+	-webkit-animation-name: show;
+	animation-duration: .5s;
+	-webkit-animation-duration: .5s;
+	animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+}
+ @-webkit-keyframes show {
+ 0% {
+ -webkit-transform: translateY(-100%);
+}
+ 100% {
+ -webkit-transform: translateY(0%);
+}
+}
+ @keyframes show {
+ 0% {
+ transform: translateY(-100%);
+}
+100% {
+ transform: translateY(0%);
+}
+}

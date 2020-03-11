@@ -1,0 +1,17 @@
+<!doctype html>
+<html ng-app="eventApp">
+<head>
+  <title>Canceling a Default Action with preventDefault()</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container" ng-controller="EventController">
+   <label>Enter a number into the text box</label>
+    <input type="text" ng-keypress="captureKey($event)">
+    <p>{{message}}</p>  
+  </div>
+    
+  <script src="scripts/angular.min.js"></script>
+<script src="scripts/PreventDefault.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<div class="row">
+    <div class="col-md-12">
+        <form name="employeeForm" role="form" class="form-horizontal"  ng-submit="submit()">
+            <fieldset>
+                <legend>{{formTitle}}</legend>
+                <div class="form-group" ng-show="!isNew">
+                    <label  class="col-md-2 control-label">Id</label>
+                    <div class="col-md-1">
+                        <input type="text" class="form-control" name="inputId" value="{{product.ProductId}}" disabled>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Product name</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputProductName" placeholder="Enter product name here ..."  ng-model="product.ProductName"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Unit Price</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputLastName" placeholder="Enter unit price ..."  ng-model="product.UnitPrice" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label  class="col-md-2 control-label">Quantity per Unit</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" name="inputTitle" placeholder="Enter quantity per unit here ..." ng-model="product.QuantityPerUnit" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-primary">{{formTitle}}</button>
+                        <button type="button" class="btn" ng-click="cancel()">Cancel</button>
+                    </div>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</div>

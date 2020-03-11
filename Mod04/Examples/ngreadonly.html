@@ -1,0 +1,31 @@
+<!doctype html>
+<html ng-app="disableApp">
+<head>  
+  <title>ngReadOnly and ngDisabled Directives</title>
+  <style>
+    .readonly {color:red;}
+    .write {color:green;}
+  </style>
+</head>  
+<body ng-controller="MainController">  
+  <h3>ngReadOnly</h3>
+  <div>
+    <input type="text" ng-readonly="isReadOnly">  
+    <button ng-class="{true:'readonly',false:'write'}[isReadOnly]" 
+     ng-click="toggle()">{{status}}</button><br />    
+  </div>    
+  <br/>  
+  <h3>ngDisabled</h3>  
+  <p>  
+    <button ng-disabled="dis">Click Me!</button>  
+  </p>  
+  <p>  
+    <label><input type="checkbox" ng-model="dis">
+      Click to Disable the Button
+    </label>  
+  </p>
+  <script src="scripts/angular.min.js"></script>  
+  <script src="scripts/ngReadOnly.js"></script>      
+</body>  
+</html>
+ 

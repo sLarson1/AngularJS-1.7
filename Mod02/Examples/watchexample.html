@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Data Binding</title>
+    <meta charset="utf-8" />
+</head>
+<body ng-app="myApp">
+
+    <div ng-controller="CartController">
+        <p>
+            <input type="button" ng-click="addItem()" value="Add Item to Cart" />
+        </p>
+        <p>
+            <input type="button" ng-click="removeItem()" value="Remove Item from Cart" />
+        </p>
+    </div>
+
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/controllers/CartController.js"></script>
+</body>
+</html>

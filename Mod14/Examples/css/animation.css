@@ -1,0 +1,15 @@
+@charset "utf-8";
+.showhide.ng-hide {
+  -webkit-animation:0.5s bgchange;
+  animation:0.5s bgchange;
+}
+
+@-webkit-keyframes bgchange {
+  from { background:#cc0000; }
+  to { background:#336600; }
+}
+
+@keyframes bgchange {
+  from { background:#cc0000; }
+  to { background:#336600; }
+}
